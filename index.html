@@ -41,6 +41,40 @@
         filter: blur(40px);
         opacity: 0.7;
       }
+
+      .dash_img{
+        top: 0rem;
+        right: -15rem;
+        width: 44rem;
+        height: 30rem;
+      }
+      .invo_fold_elemnt{
+          top: -6rem;
+          right: -12rem;
+        }
+      .anlts_fold_elemnt{
+        bottom: 5rem;
+        left: 0rem;
+
+      }
+      @media screen and (max-width: 768px) {
+        .dash_img{
+          top: 13rem;
+        right: 0rem;
+        width: 30rem;
+        height: 22rem;
+        }
+        .invo_fold_elemnt{
+          top: 5rem;
+          right: 3rem;
+        }
+        .anlts_fold_elemnt{
+          
+        right: 13rem;
+        bottom: -4rem;
+        }
+     
+      }
     </style>
   </head>
   <body class="bg-gray-50 font-sans overflow-x-hidden">
@@ -62,7 +96,7 @@
             <a
               href="#"
               class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700"
-              >Home</a
+              >Solutions</a
             >
             <a
               href="#"
@@ -132,7 +166,7 @@
               class="bg-gradient-to-r from-white/60 to-purple-50/60 rounded-[40px] p-8 mb-8"
             >
               <h1 class="text-5xl font-bold text-gray-800 mb-4">
-                Smart    <span class="text-purple-600">Companies</span> Choose
+                Smart    <span class="text-purple-600">Companies</span> Choose SUMU
               </h1>
               <p class="text-xl text-gray-600">
                 A bilingual business platform for SMEs, freelancers, and startups to invoice, accept payments, automate VAT, unify banking, track analytics, and boost productivity with AI
@@ -164,13 +198,18 @@
         </div>
 
         <!-- Floating Organic Cards -->
-        <div class="md:w-1/2 relative h-[600px]">
+        <div class="md:w-1/2 relative h-[600px] w-[500px]">
+          <!-- Dashboard Screen Image -->
+          <div class="absolute dash_img rounded-3xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-all duration-700 ease-out animate-float" data-aos="fade-left" data-aos-delay="100">
+            <img src="img/dash.svg" alt="Dashboard Preview" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          </div>
           <div
-            class="absolute top-20 right-12 bg-white/80 rounded-[35px] p-6 shadow-2xl backdrop-blur-md transform rotate-3 hover:rotate-0 transition-all duration-700 ease-out animate-float"
+            class="absolute  invo_fold_elemnt bg-white/80 rounded-[35px] p-6 shadow-2xl backdrop-blur-md transform rotate-3 hover:rotate-0 transition-all duration-700 ease-out animate-float"
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-3  ">
               <div class="bg-purple-100 rounded-full p-3">
                 <i data-feather="file-text" class="text-purple-600"></i>
               </div>
@@ -180,7 +219,7 @@
           </div>
 
           <div
-            class="absolute bottom-32 left-16 bg-white/80 rounded-[40px] p-6 shadow-2xl backdrop-blur-md transform -rotate-2 hover:rotate-1 transition-all duration-800 ease-out animate-float"
+            class="absolute anlts_fold_elemnt  bg-white/80 rounded-[40px] p-6 shadow-2xl backdrop-blur-md transform -rotate-2 hover:rotate-1 transition-all duration-800 ease-out animate-float"
             style="animation-delay: 1s"
             data-aos="fade-left"
             data-aos-delay="400"
@@ -214,7 +253,7 @@
           </div>
 
           <div
-            class="absolute bottom-20 right-20 bg-green-50 rounded-full px-6 py-3 shadow-lg hover:shadow-2xl transition-all duration-500 flex items-center"
+            class="absolute md:bottom-10 bottom-[-6rem] right-20 bg-green-50 rounded-full px-6 py-3 shadow-lg hover:shadow-2xl transition-all duration-500 flex items-center"
             data-aos="fade-left"
             data-aos-delay="800"
           >
