@@ -90,11 +90,12 @@
             >
               Book a Demo
             </button>
+              </a>
             
-            <button class="md:hidden rounded-full p-2 hover:bg-purple-50">
+            <button id="m-menu-button" class="md:hidden rounded-full p-2 hover:bg-purple-50">
               <i data-feather="menu"></i>
             </button>
-            </a>
+          
           </div>
         </div>
       </div>
@@ -608,7 +609,7 @@
                 <a
                   href="#"
                   class="text-gray-600 hover:text-purple-600 transition-colors duration-300"
-                  >Templates</a
+                  >About</a
                 >
               </li>
               <li>
@@ -697,6 +698,49 @@
         </div>
       </div>
     </footer>
+<!-- Mobile Menu Section -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-500 ease-in-out shadow-lg md:hidden">
+  <div class="flex justify-between items-center p-4 border-b border-gray-200">
+    <img src="img/logo-removebg.png" alt="Logo" class="w-24 h-auto">
+    <button id="mobile-menu-close" class="rounded-full p-2 hover:bg-gray-100">
+      <i data-feather="x" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <nav class="flex flex-col mt-10 space-y-6 px-6">
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Home</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Features</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Pricing</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">About</a>
+    <a href="#" class="mt-6 inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white text-center rounded-full px-8 py-3 hover:from-purple-700 hover:to-blue-600 shadow-lg transition">Book a Demo</a>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+
+    const menuButton = document.getElementById('m-menu-button');
+    const closeButton = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && closeButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        console.log("gjhjhjhbj");
+        mobileMenu.classList.remove('-translate-x-full');
+      });
+
+      closeButton.addEventListener('click', () => {
+        console.log("gjhjhjhbj");
+        mobileMenu.classList.add('-translate-x-full');
+      });
+    }
+
+    feather.replace();
+  });
+</script>
+
+
 
     <script>
       AOS.init({
