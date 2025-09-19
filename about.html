@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sumu</title>
+    <link rel="icon" type="image/png" href="img/favicon.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      .animate-fade-in { animation: fade-in 1s ease forwards; }
+      .animate-slide-up { animation: slide-up 1s ease forwards; }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes slide-up {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .testimonials-swiper .swiper-slide-active .testimonial-card {
+  background-color: #4f46e5; /* indigo-600 */
+  color: white;
+}
+
+.testimonials-swiper .swiper-slide-active .testimonial-card img {
+  border: 2px solid white;
+}
+
+.testimonials-swiper .swiper-slide-active .testimonial-card p,
+.testimonials-swiper .swiper-slide-active .testimonial-card span,
+.testimonials-swiper .swiper-slide-active .testimonial-card .font-semibold {
+  color: white;
+}
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-gray-50/90 backdrop-blur-xl rounded-b-[40px] shadow-lg border-b-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between rounded-full bg-white/60 backdrop-blur-sm px-6 py-2">
+          <div class="flex items-center justify-center" style="width: 6rem;">
+            <img src="img/logo-removebg.png" alt="Organic Logo">
+          </div>
+          <nav class="hidden md:flex space-x-2">
+            <a href="#" class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700">About</a>
+            <a href="#" class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700">Solutions</a>
+            <a href="#" class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700">Features</a>
+            <a href="#" class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700">Pricing</a>
+          </nav>
+          <div class="flex items-center space-x-4">
+            <a href="#">
+              <button class="hidden md:block bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full px-8 py-3 hover:shadow-xl hover:scale-105 transition-all duration-500 ease-out">Book a Demo</button>
+            </a>
+            <button id="m-menu-button" class="md:hidden rounded-full p-2 hover:bg-purple-50">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <!-- Creative Hero Section for SaaS -->
+<section class="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-20 -left-20 w-72 h-72 bg-purple-200 rounded-full blur-3xl opacity-30"></div>
+    <div class="absolute top-40 right-0 w-80 h-80 bg-indigo-300 rounded-full blur-3xl opacity-20"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20 lg:pt-36 lg:pb-28 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Left: Heading & CTA -->
+    <div class="text-center lg:text-left space-y-8">
+      <span class="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1 rounded-full tracking-wide">Passion meets purpose</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+        NextSaaS is redefining the <span class="text-indigo-600">future</span> of business solutions.
+      </h1>
+      <p class="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+        Empower your team with powerful tools designed to simplify workflows, streamline invoicing, and drive growth. Build a smarter, more efficient business — starting today.
+      </p>
+      <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+        <a href="#" class="bg-gradient-to-r from-indigo-600 to-purple-500 text-white font-semibold rounded-full px-8 py-3 shadow hover:scale-105 transition-all">Get Started</a>
+        <a href="#" class="bg-white text-gray-800 font-semibold rounded-full px-8 py-3 shadow hover:shadow-lg hover:scale-105 transition-all">Watch Demo</a>
+      </div>
+    </div>
+
+    <!-- Right: Hero Media -->
+    <div class="relative w-full flex justify-center">
+      <div class="absolute -top-6 -left-6 w-40 h-40 bg-purple-300 rounded-full blur-2xl opacity-30"></div>
+      <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-indigo-400 rounded-full blur-2xl opacity-20"></div>
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl max-w-lg w-full">
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Team working together" class="w-full h-auto">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/60 to-transparent p-6">
+          <p class="text-white text-lg font-medium">Collaborate seamlessly and grow with confidence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Invoice Mission Section: Mobile-optimized -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-center">
+
+    <!-- Left: Metrics & Message -->
+    <div class="space-y-8 text-center lg:text-left">
+      <span class="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-1 rounded-full">
+        Why Choose Sumu
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+        Simplify your invoicing and get paid faster.
+      </h2>
+      <p class="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+        Sumu is the all-in-one platform for invoices, payments, and reporting.
+        Automate billing, track revenue, and stay tax-ready — wherever you work.
+      </p>
+
+      <!-- KPI cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
+        <div class="bg-white p-5 rounded-xl shadow text-center">
+          <p class="text-xl sm:text-2xl font-bold text-gray-900">$120K+</p>
+          <p class="text-sm text-gray-500">Revenue tracked</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow text-center">
+          <p class="text-xl sm:text-2xl font-bold text-gray-900">98%</p>
+          <p class="text-sm text-gray-500">On-time payments</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow text-center">
+          <p class="text-xl sm:text-2xl font-bold text-gray-900">500+</p>
+          <p class="text-sm text-gray-500">Happy clients</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Cards -->
+    <div class="space-y-6 w-full max-w-md mx-auto lg:max-w-none">
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Invoice Draft -->
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Invoice Draft</h3>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M9 16h6M9 8h6M4 7h14l-1 13H5L4 7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 text-base">New invoice prepared</p>
+              <p class="text-sm text-gray-500">Ready to send to client</p>
+            </div>
+          </div>
+          <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+            <span>2 hrs ago</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Payment Status -->
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition flex flex-col items-center">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Payment Status</h3>
+          <div class="relative">
+            <svg class="w-20 h-20" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payment progress">
+              <circle class="text-gray-200" stroke="currentColor" stroke-width="4" fill="none" cx="18" cy="18" r="16"></circle>
+              <circle class="text-green-500" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" cx="18" cy="18" r="16" stroke-dasharray="85 100" transform="rotate(-90 18 18)"></circle>
+              <text style="font-size: .700rem;" x="18" y="21" text-anchor="middle" class="text-base font-semibold fill-current text-green-600">85%</text>
+            </svg>
+          </div>
+          <p class="mt-3 text-sm text-gray-500">Invoices paid</p>
+        </div>
+      </div>
+
+      <!-- Dark card -->
+      <div class="bg-gray-900 rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0">
+        <div class="flex -space-x-3 justify-center sm:justify-start">
+          <img src="https://randomuser.me/api/portraits/men/60.jpg" class="h-10 w-10 rounded-full border-2 border-white" alt="">
+          <img src="https://randomuser.me/api/portraits/women/61.jpg" class="h-10 w-10 rounded-full border-2 border-white" alt="">
+          <img src="https://randomuser.me/api/portraits/men/62.jpg" class="h-10 w-10 rounded-full border-2 border-white" alt="">
+        </div>
+        <div class="text-center sm:text-left">
+          <p class="text-white font-medium">Finance Team</p>
+          <p class="text-gray-400 text-sm">Keeping your cashflow clear</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Mission Roadmap Section -->
+<section class="relative bg-white py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-purple-50 to-white"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">Our Journey</span>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Mission & Roadmap</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Follow Sumu's roadmap to smarter invoicing — designed to help businesses automate, scale, and grow.</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <div class="hidden lg:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-purple-300 to-purple-500 rounded-full"></div>
+      <div class="space-y-12 lg:space-y-20">
+
+        <!-- Step 1 -->
+        <div class="relative lg:flex lg:items-center">
+          <div class="lg:w-1/2 lg:pr-12 text-center lg:text-right" data-aos="fade-right">
+            <h3 class="text-2xl font-bold text-purple-700">Phase 1: Automate Basics</h3>
+            <p class="text-gray-600 mt-3">Start with smart invoice creation, instant templates, and one-click payment tracking.</p>
+          </div>
+          <div class="relative z-10 flex justify-center items-center w-16 h-16 rounded-full bg-purple-600 text-white mx-auto lg:mx-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <span class="text-lg font-bold">1</span>
+          </div>
+          <div class="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0 flex justify-center lg:justify-start">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Phase 1" class="rounded-2xl shadow-lg w-72" data-aos="zoom-in">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative lg:flex lg:items-center lg:flex-row-reverse">
+          <div class="lg:w-1/2 lg:pl-12 text-center lg:text-left" data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-purple-700">Phase 2: Insights & Reporting</h3>
+            <p class="text-gray-600 mt-3">Visual dashboards, revenue analytics, and payment performance reports for better decisions.</p>
+          </div>
+          <div class="relative z-10 flex justify-center items-center w-16 h-16 rounded-full bg-purple-600 text-white mx-auto lg:mx-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <span class="text-lg font-bold">2</span>
+          </div>
+          <div class="lg:w-1/2 lg:pr-12 mt-6 lg:mt-0 flex justify-center lg:justify-end">
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Phase 2" class="rounded-2xl shadow-lg w-72" data-aos="zoom-in">
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative lg:flex lg:items-center">
+          <div class="lg:w-1/2 lg:pr-12 text-center lg:text-right" data-aos="fade-right">
+            <h3 class="text-2xl font-bold text-purple-700">Phase 3: Advanced AI Support</h3>
+            <p class="text-gray-600 mt-3">Leverage AI for automated reminders, smart cash flow predictions, and custom suggestions.</p>
+          </div>
+          <div class="relative z-10 flex justify-center items-center w-16 h-16 rounded-full bg-purple-600 text-white mx-auto lg:mx-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <span class="text-lg font-bold">3</span>
+          </div>
+          <div class="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0 flex justify-center lg:justify-start">
+            <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Phase 3" class="rounded-2xl shadow-lg w-72" data-aos="zoom-in">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Creative Core Values Section -->
+<section class="relative bg-gradient-to-b from-purple-50 to-white py-24 overflow-hidden">
+  <div class="absolute -top-20 -left-32 w-80 h-80 bg-purple-200 rounded-full blur-3xl opacity-30"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">Our Values</span>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Core Principles That Drive Us</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We build every feature of Sumu around values that prioritize simplicity, security, and innovation — helping businesses achieve more with less effort.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Value Card 1 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 text-center transition transform hover:-translate-y-2" data-aos="zoom-in">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 6h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Innovation</h3>
+        <p class="text-gray-600">We embrace technology to deliver smarter invoicing and business tools.</p>
+      </div>
+
+      <!-- Value Card 2 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 text-center transition transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-teal-500 text-white shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 12l5 5L20 9" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Integrity</h3>
+        <p class="text-gray-600">Transparency and accountability are the cornerstones of everything we build.</p>
+      </div>
+
+      <!-- Value Card 3 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 text-center transition transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-5c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Simplicity</h3>
+        <p class="text-gray-600">Every interface is crafted to be intuitive and easy to use.</p>
+      </div>
+
+      <!-- Value Card 4 -->
+      <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 text-center transition transform hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
+        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-red-500 text-white shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Empowerment</h3>
+        <p class="text-gray-600">We focus on enabling growth by eliminating unnecessary complexity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial Slider with Static Highlight -->
+<section class="bg-gray-50 py-24 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <span class="inline-block bg-indigo-100 text-indigo-700 text-sm font-semibold px-5 py-1 rounded-full mb-4">
+      Customer success
+    </span>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+      Real people. Real results.
+    </h2>
+    <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+      “Sumu helps teams automate billing, gain insights, and focus on growth —
+      with reliable support and fast performance.”
+    </p>
+
+    <!-- Swiper -->
+    <div class="swiper testimonials-swiper">
+      <div class="swiper-wrapper">
+        <!-- Review 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card rounded-3xl p-8 shadow hover:shadow-xl transition h-full flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Emily Rodriguez" class="h-14 w-14 rounded-full">
+              <div class="text-left">
+                <p class="font-semibold text-gray-900">Emily Rodriguez</p>
+                <span class="text-sm text-gray-500">Data Science Lead, Google Cloud</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-base leading-relaxed flex-1">
+              “The analytics capabilities provided unprecedented insights into our operations. ROI exceeded expectations within the first quarter.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 (highlight) -->
+        <div class="swiper-slide">
+          <div class="testimonial-card rounded-3xl p-8 shadow hover:shadow-xl transition h-full flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Robert Anderson" class="h-14 w-14 rounded-full border-2 border-white">
+              <div class="text-left">
+                <p class="font-semibold">Robert Anderson</p>
+                <span class="text-sm opacity-90">Senior IT Director, Microsoft</span>
+              </div>
+            </div>
+            <p class="text-base leading-relaxed opacity-90 flex-1">
+              “The software streamlined our operations and improved team productivity by 40%.
+              Outstanding support and regular updates keep us ahead of the curve.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card rounded-3xl p-8 shadow hover:shadow-xl transition h-full flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Jennifer Martinez" class="h-14 w-14 rounded-full">
+              <div class="text-left">
+                <p class="font-semibold text-gray-900">Jennifer Martinez</p>
+                <span class="text-sm text-gray-500">CTO, Oracle</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-base leading-relaxed flex-1">
+              “Implementing this solution reduced our infrastructure costs by 60% while enhancing system reliability and security.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card rounded-3xl p-8 shadow hover:shadow-xl transition h-full flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Linda Chen" class="h-14 w-14 rounded-full">
+              <div class="text-left">
+                <p class="font-semibold text-gray-900">Linda Chen</p>
+                <span class="text-sm text-gray-500">Product Manager, Shopify</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-base leading-relaxed flex-1">
+              “Sumu’s intuitive interface has simplified our billing process tremendously. Our finance team loves it!”
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card rounded-3xl p-8 shadow hover:shadow-xl transition h-full flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Carlos Rivera" class="h-14 w-14 rounded-full">
+              <div class="text-left">
+                <p class="font-semibold text-gray-900">Carlos Rivera</p>
+                <span class="text-sm text-gray-500">Finance Head, Airtable</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-base leading-relaxed flex-1">
+              “The seamless payment tracking has helped us maintain cash flow visibility like never before.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-10"></div>
+    </div>
+
+    <div class="mt-12">
+      <a href="#"
+         class="inline-block px-8 py-3 bg-gray-900 text-white rounded-full font-semibold shadow hover:bg-gray-800 transition">
+        View all reviews
+      </a>
+    </div>
+  </div>
+
+  <!-- Swiper CSS & JS -->
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      new Swiper('.testimonials-swiper', {
+        loop: true,
+        autoplay: { delay: 4500, disableOnInteraction: false },
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    });
+  </script>
+</section>
+
+
+
+    <!-- New Creative Section -->
+    <section class="py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12" data-aos="zoom-in">Why Businesses Choose Sumu</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="p-6 bg-white/80 rounded-2xl shadow-lg text-center hover:scale-105 transform transition duration-500" data-aos="fade-up">
+            <i data-feather="zap" class="w-10 h-10 text-purple-600 mx-auto mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">Speed & Efficiency</h3>
+            <p class="text-gray-600">Automate tasks quickly and reduce manual effort, saving valuable time for businesses.</p>
+          </div>
+          <div class="p-6 bg-white/80 rounded-2xl shadow-lg text-center hover:scale-105 transform transition duration-500" data-aos="fade-up" data-aos-delay="200">
+            <i data-feather="shield" class="w-10 h-10 text-blue-600 mx-auto mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">Security & Compliance</h3>
+            <p class="text-gray-600">Built-in compliance tools ensure data protection and adherence to local regulations.</p>
+          </div>
+          <div class="p-6 bg-white/80 rounded-2xl shadow-lg text-center hover:scale-105 transform transition duration-500" data-aos="fade-up" data-aos-delay="400">
+            <i data-feather="bar-chart-2" class="w-10 h-10 text-green-600 mx-auto mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-800">Insightful Analytics</h3>
+            <p class="text-gray-600">Gain real-time insights into business performance for informed decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- Improved Creative Footer -->
+<footer class="relative bg-gradient-to-r from-gray-900 via-indigo-950 to-gray-900 text-white pt-20 pb-10 rounded-t-[80px] overflow-hidden">
+  <!-- Decorative top wave -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-none">
+    <svg class="relative block w-full h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,53.3C672,64,768,96,864,112C960,128,1056,128,1152,117.3C1248,107,1344,85,1392,74.7L1440,64V0H0Z"></path>
+    </svg>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    <!-- Top Section -->
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div class="flex flex-col items-start">
+        <img src="https://joinsumu.com/img/logo-removebg.png" alt="Sumu Logo" class="w-32 h-auto mb-6 object-contain">
+        <p class="text-gray-300 text-sm leading-relaxed max-w-xs">
+          Empowering modern businesses with smart invoicing, effortless payments, and growth-focused insights.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-indigo-400 transition">Features</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Solutions</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Pricing</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Integrations</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Resources</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-indigo-400 transition">Docs</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Guides</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Community</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Stay Updated</h3>
+        <p class="text-sm text-gray-300 mb-4">Join 10,000+ business owners getting weekly insights.</p>
+        <form class="flex items-center bg-white/10 rounded-full overflow-hidden">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-transparent focus:outline-none">
+          <button type="submit" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-400 text-white font-semibold transition">Go</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col sm:flex-row justify-between items-center border-t border-white/20 pt-6">
+      <p class="text-sm text-gray-400">&copy; 2025 OceanGate for Smart Technologies LLC. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="#" class="bg-white/10 p-3 rounded-full hover:bg-sky-500 transition"><i data-feather="twitter"></i></a>
+        <a href="#" class="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition"><i data-feather="instagram"></i></a>
+        <a href="#" class="bg-white/10 p-3 rounded-full hover:bg-blue-500 transition"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Mobile Menu Section -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-500 ease-in-out shadow-lg md:hidden">
+  <div class="flex justify-between items-center p-4 border-b border-gray-200">
+    <img src="img/logo-removebg.png" alt="Logo" class="w-24 h-auto">
+    <button id="mobile-menu-close" class="rounded-full p-2 hover:bg-gray-100">
+      <i data-feather="x" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <nav class="flex flex-col mt-10 space-y-6 px-6">
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">About</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Solutions</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Features</a>
+    <a href="#" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Pricing</a>
+    <a href="#" class="mt-6 inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white text-center rounded-full px-8 py-3 hover:from-purple-700 hover:to-blue-600 shadow-lg transition">Book a Demo</a>
+  </nav>
+</div>
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuButton = document.getElementById('m-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeButton = document.getElementById('mobile-menu-close');
+
+        if (menuButton && closeButton && mobileMenu) {
+          menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+          });
+          closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+          });
+        }
+        feather.replace();
+      });
+
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-quart',
+        once: true
+      });
+    </script>
+  </body>
+</html>
