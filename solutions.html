@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solutions - Sumu</title>
+    <link rel="icon" type="image/png" href="img/favicon.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @keyframes fade-in { from { opacity: 0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+      @keyframes slide-up { from { opacity: 0; transform: translateY(40px);} to { opacity:1; transform: translateY(0);} }
+      .animate-fade-in { animation: fade-in 1s ease forwards; }
+      .animate-slide-up { animation: slide-up 1s ease forwards; }
+      .card-shadow{ box-shadow: 0 20px 40px rgba(13, 16, 46, 0.06); }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans overflow-x-hidden">
+    <!-- Navbar (mirrors Home/About) -->
+    <header
+      class="sticky top-0 z-50 bg-[#F8F8F8]/90 backdrop-blur-xl rounded-b-[40px] shadow-lg border-b-0"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div
+          class="flex items-center justify-between rounded-full bg-white/60 backdrop-blur-sm px-6 py-2"
+        >
+          <div
+            class="flex items-center justify-center"
+            style="width: 6rem;"
+          >
+            <img src="img/logo-removebg.png" alt="Organic Logo">
+          </div>
+          <nav class="hidden md:flex space-x-2">
+            <a
+              href="/"
+              class="rounded-full px-6 py-2 hover:bg-[#8C6BB6]/10 transition-all duration-300 ease-out hover:scale-105 text-[#333333] font-medium"
+              >Home</a
+            >
+            <a
+              href="/about"
+              class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700"
+              >About</a
+            >
+            <a
+              href="/coming_soon"
+              class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700"
+              >Features</a
+            >
+            <a
+              href="/coming_soon"
+              class="rounded-full px-4 py-2 hover:bg-purple-50 transition-all duration-300 ease-out hover:scale-105 text-gray-700"
+              >Pricing</a
+            >
+          </nav>
+          <div class="flex items-center space-x-4">
+            
+             <a href="/coming_soon">
+
+            <button
+              class="hidden md:block bg-gradient-to-r from-[#8C6BB6] to-[#A0C4FF] text-white rounded-full px-8 py-3 hover:shadow-xl hover:scale-105 transition-all duration-500 ease-out"
+>
+            >
+              Book a Demo
+            </button>
+              </a>
+            
+            <button id="m-menu-button" class="md:hidden rounded-full p-2 hover:bg-purple-50">
+              <i data-feather="menu"></i>
+            </button>
+          
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+<section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20 lg:pt-36 lg:pb-28 grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Left Content -->
+    <div class="text-center lg:text-left space-y-6 animate-fade-in">
+      <span class="inline-block bg-gradient-to-r from-purple-400 to-indigo-500 text-white text-sm font-semibold px-4 py-1 rounded-full tracking-wide shadow-lg">
+        Sumu Platform
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+        Smarter <span class="text-purple-400">Invoicing</span>, Seamless <span class="text-indigo-400">Accounting</span>, and AI-driven Growth
+      </h1>
+
+      <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+        From invoicing and VAT automation to payments, banking, analytics, and AI — Sumu gives SMEs a bilingual, compliant, and scalable financial command center.
+      </p>
+
+      <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4 pt-2">
+        <a href="#catalog" class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded-full px-8 py-3 shadow-lg hover:scale-105 transition-transform duration-300">
+          Explore Solutions
+        </a>
+        <a href="/coming_soon" class="bg-white text-gray-900 font-semibold rounded-full px-8 py-3 shadow hover:shadow-xl hover:scale-105 transition-transform duration-300">
+          Request Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Content (Showcase Card UI) -->
+    <div class="relative w-full flex justify-center animate-slide-up">
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-800/70 backdrop-blur-xl border border-gray-700 max-w-lg w-full p-8 space-y-6">
+
+        <!-- Mini Card 1 -->
+        <div class="bg-gradient-to-r from-purple-500/10 to-purple-400/20 rounded-2xl p-5 flex items-center justify-between border border-purple-400/30">
+          <div>
+            <h3 class="text-lg font-semibold text-purple-400">Sales & Invoicing</h3>
+            <p class="text-gray-300 text-sm mt-1">Create bilingual, VAT-compliant invoices with ease.</p>
+          </div>
+          <span class="text-purple-400 font-bold text-xl">→</span>
+        </div>
+
+        <!-- Mini Card 2 -->
+        <div class="bg-gradient-to-r from-indigo-500/10 to-indigo-400/20 rounded-2xl p-5 flex items-center justify-between border border-indigo-400/30">
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-400">Accounting</h3>
+            <p class="text-gray-300 text-sm mt-1">Smart, simple, and compliant accounting for SMEs.</p>
+          </div>
+          <span class="text-indigo-400 font-bold text-xl">→</span>
+        </div>
+
+        <!-- Mini Card 3 -->
+        <div class="bg-gradient-to-r from-pink-500/10 to-pink-400/20 rounded-2xl p-5 flex items-center justify-between border border-pink-400/30">
+          <div>
+            <h3 class="text-lg font-semibold text-pink-400">AI Assistant</h3>
+            <p class="text-gray-300 text-sm mt-1">Get smart insights, reminders, and automation.</p>
+          </div>
+          <span class="text-pink-400 font-bold text-xl">→</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Solutions grid with free icon URLs -->
+
+
+<section id="catalog" class="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+        Explore Our Solutions
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        A unified platform for SMEs: invoicing, accounting, VAT, payments, banking, analytics, APIs, and AI — designed for the future of business.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Sales & Invoicing -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-100 mb-6">
+            <i data-feather="file-text" class="text-indigo-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Sales & Invoicing</h3>
+          <p class="text-gray-600 mb-4">Create bilingual, VAT-compliant invoices with customizable templates and instant sharing.</p>
+          <a href="#invoicing" class="inline-flex items-center text-indigo-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- Accounting -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-cyan-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-100 mb-6">
+            <i data-feather="book-open" class="text-blue-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Accounting</h3>
+          <p class="text-gray-600 mb-4">Smart, simple, and compliant accounting with real-time reporting and VAT automation.</p>
+          <a href="#accounting" class="inline-flex items-center text-blue-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- Accept Payments -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-100 to-red-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-100 mb-6">
+            <i data-feather="credit-card" class="text-pink-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Accept Payments</h3>
+          <p class="text-gray-600 mb-4">Securely accept cards, bank transfers, and wallets with licensed payment partners.</p>
+          <a href="#payments" class="inline-flex items-center text-pink-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- VAT Automation -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-100 to-emerald-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-100 mb-6">
+            <i data-feather="percent" class="text-green-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">VAT Automation</h3>
+          <p class="text-gray-600 mb-4">Automated VAT calculation, compliance-ready reports, and error-free filing.</p>
+          <a href="#vat" class="inline-flex items-center text-green-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- Banking Aggregation -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-yellow-100 to-orange-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-yellow-100 mb-6">
+            <i data-feather="layers" class="text-yellow-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Banking Aggregation</h3>
+          <p class="text-gray-600 mb-4">Connect all accounts, track balances, and reconcile with intelligent matching.</p>
+          <a href="#banking" class="inline-flex items-center text-yellow-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- Analytics & Reporting -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-100 to-sky-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-100 mb-6">
+            <i data-feather="bar-chart-2" class="text-cyan-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Analytics & Reporting</h3>
+          <p class="text-gray-600 mb-4">Real-time dashboards and customizable reports to guide smarter decisions.</p>
+          <a href="#analytics" class="inline-flex items-center text-cyan-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- API & Integrations -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-teal-100 to-emerald-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-teal-100 mb-6">
+            <i data-feather="code" class="text-teal-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">API & Integrations</h3>
+          <p class="text-gray-600 mb-4">Developer-friendly APIs and connectors to automate and scale workflows.</p>
+          <a href="#api" class="inline-flex items-center text-teal-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+      <!-- AI Assistant -->
+      <div class="group relative bg-white rounded-3xl border border-gray-200 p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-100 to-purple-100 opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-100 mb-6">
+            <i data-feather="cpu" class="text-pink-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">AI Assistant</h3>
+          <p class="text-gray-600 mb-4">Smarter workflows, reminders, and insights powered by AI automation.</p>
+          <a href="#ai" class="inline-flex items-center text-pink-600 font-medium hover:underline">Learn more →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="accounting" class="relative py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+  <!-- Futuristic background elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-gradient-to-tr from-blue-500/20 via-indigo-400/30 to-transparent rounded-full blur-3xl opacity-60 animate-pulse"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 via-blue-500/30 to-transparent rounded-full blur-3xl opacity-60 animate-pulse"></div>
+    <div class="absolute inset-0 bg-[url('https://static.photos/abstract/1200x630/42')] opacity-5 mix-blend-overlay"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(59,130,246,0.1)_70%)]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+    <!-- Content -->
+    <div class="space-y-10" data-aos="fade-right">
+      <div class="inline-flex items-center space-x-3 bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-700">
+        <div class="w-2 h-2 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium bg-gradient-to-r from-blue-300 via-indigo-400 to-purple-400 bg-clip-text text-transparent tracking-wide">AI-POWERED ACCOUNTING</span>
+      </div>
+      
+      <h2 class="text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+        Quantum Accounting
+      </h2>
+      
+      <p class="text-gray-200 text-xl leading-relaxed max-w-xl">
+        Experience the future of finance with Sumu's neural accounting engine. Our quantum-inspired algorithms process transactions at lightspeed while maintaining perfect compliance.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-blue-400 transition-all">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-blue-900/50 text-blue-400 border border-blue-500/30">
+            <i data-feather="cpu" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold bg-gradient-to-r from-blue-300 to-indigo-400 bg-clip-text text-transparent">Neural Ledger</h4>
+            <p class="text-gray-400 text-sm mt-1">Self-learning double-entry system</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-blue-400 transition-all">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-900/50 text-indigo-400 border border-indigo-500/30">
+            <i data-feather="globe" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold bg-gradient-to-r from-indigo-300 to-purple-400 bg-clip-text text-transparent">Omni-Currency</h4>
+            <p class="text-gray-400 text-sm mt-1">Real-time FX & crypto support</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-blue-400 transition-all">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-purple-900/50 text-purple-400 border border-purple-500/30">
+            <i data-feather="bar-chart-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold bg-gradient-to-r from-purple-300 to-blue-400 bg-clip-text text-transparent">Holographic Reports</h4>
+            <p class="text-gray-400 text-sm mt-1">3D financial visualization</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-blue-400 transition-all">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-900/50 text-indigo-400 border border-indigo-500/30">
+            <i data-feather="shield" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold bg-gradient-to-r from-indigo-300 to-purple-400 bg-clip-text text-transparent">Quantum Audit</h4>
+            <p class="text-gray-400 text-sm mt-1">Blockchain-verified compliance</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex items-center space-x-6">
+        <a href="#demo" class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-indigo-400 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-300 group">
+          <span>Launch Quantum Console</span>
+          <i data-feather="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="#features" class="text-blue-400 hover:text-white font-medium flex items-center">
+          <i data-feather="play" class="w-4 h-4 mr-2"></i>
+          <span>Watch Demo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="relative" data-aos="fade-left">
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-700/50 backdrop-blur-xl bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="aspect-w-16 aspect-h-9">
+          <img src="https://static.photos/technology/1024x576/88" alt="Quantum Accounting Interface" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-indigo-500/30 to-transparent mix-blend-overlay"></div>
+        <div class="absolute inset-0 border border-gray-700/30 rounded-3xl pointer-events-none"></div>
+      </div>
+      
+      <!-- Floating holographic card -->
+      <div class="absolute -bottom-6 -left-6 bg-gray-900 rounded-2xl shadow-2xl border border-blue-400/20 p-6 w-72 transform hover:scale-105 transition-all backdrop-blur-sm">
+        <div class="flex justify-between items-start">
+          <div>
+            <h4 class="text-sm font-bold text-blue-300 mb-1">QUANTUM METRICS</h4>
+            <p class="text-3xl font-extrabold text-white">+42% Efficiency</p>
+            <span class="text-xs text-gray-400">AI-optimized processes</span>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-400/20">
+            <i data-feather="zap" class="text-blue-400 w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="mt-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full w-3/4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="features" class="py-28 relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white text-gray-900">
+  <!-- Decorative background -->
+  <div class="absolute inset-0 opacity-30" style="background: radial-gradient(circle at 25% 40%, #A0C4FF 0%, transparent 60%), radial-gradient(circle at 75% 60%, #E9D5FF 0%, transparent 60%);"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-20" data-aos="fade-up">
+      <span class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold mb-6 tracking-wide shadow-md">
+        Next-Gen Features
+      </span>
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 bg-clip-text text-transparent animate-pulse">
+        Built for the Future
+      </h2>
+      <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+        Unlock futuristic tools engineered for tomorrow’s businesses with precision, security, and intelligence.
+      </p>
+    </div>
+
+    <!-- Features Grid (sequential fade-in) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="zap" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">AI-Powered Automation</h3>
+        <p class="text-gray-500 max-w-sm">Workflows that continuously learn, optimize, and evolve with your business.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="shield" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Quantum Encryption</h3>
+        <p class="text-gray-500 max-w-sm">Future-proof data security with quantum-resistant algorithms and zero-trust architecture.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-cyan-100 text-cyan-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="globe" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Global Compliance</h3>
+        <p class="text-gray-500 max-w-sm">Automated compliance across 100+ countries, always updated in real-time.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="400">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="bar-chart-2" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Predictive Analytics</h3>
+        <p class="text-gray-500 max-w-sm">Hyper-intelligent dashboards with AI-driven foresight and simulations.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="500">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-teal-100 text-teal-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="refresh-cw" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Smart Reconciliation</h3>
+        <p class="text-gray-500 max-w-sm">Automated, self-healing transaction matching with near-zero errors.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-4 group" data-aos="fade-up" data-aos-delay="600">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-600 shadow-md group-hover:scale-110 transition-transform">
+          <i data-feather="cpu" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-2xl font-bold">Cognitive Intelligence</h3>
+        <p class="text-gray-500 max-w-sm">AI that adapts to strategy, delivering insights beyond automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ duration: 800, easing: 'ease-out-quart', once: true });
+    feather.replace();
+  });
+</script>
+
+
+    <!-- CTA + Contact -->
+    <section id="contact" class="py-16 bg-gradient-to-b from-[#F8F8F8] to-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-extrabold text-gray-900">Ready to transform finance operations?</h3>
+        <p class="text-gray-600 mt-4">Book a demo or request a custom walkthrough for your business.</p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="/coming_soon" class="px-8 py-3 rounded-full bg-purple-600 text-white font-semibold">Book a Demo</a>
+          <a href="mailto:sales@sumu.com" class="px-8 py-3 rounded-full bg-white border border-gray-200">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Improved Creative Footer -->
+<footer class="relative bg-gradient-to-r from-gray-900 via-indigo-950 to-gray-900 text-white pt-20 pb-10 rounded-t-[80px] overflow-hidden">
+  <!-- Decorative top wave -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-none">
+    <svg class="relative block w-full h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,53.3C672,64,768,96,864,112C960,128,1056,128,1152,117.3C1248,107,1344,85,1392,74.7L1440,64V0H0Z"></path>
+    </svg>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    <!-- Top Section -->
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div class="flex flex-col items-start">
+        <img src="https://joinsumu.com/img/logo-removebg.png" alt="Sumu Logo" class="w-32 h-auto mb-6 object-contain">
+        <p class="text-gray-300 text-sm leading-relaxed max-w-xs">
+          Empowering modern businesses with smart invoicing, effortless payments, and growth-focused insights.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Features</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Solutions</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Pricing</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Integrations</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Resources</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Docs</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Guides</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Community</a></li>
+          <li><a href="/coming_soon" class="hover:text-indigo-400 transition">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Stay Updated</h3>
+        <p class="text-sm text-gray-300 mb-4">Join 10,000+ business owners getting weekly insights.</p>
+        <form class="flex items-center bg-white/10 rounded-full overflow-hidden">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 text-white placeholder-gray-400 bg-transparent focus:outline-none">
+          <button type="submit" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-400 text-white font-semibold transition">Go</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col sm:flex-row justify-between items-center border-t border-white/20 pt-6">
+      <p class="text-sm text-gray-400">&copy; 2025 OceanGate for Smart Technologies LLC. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="/coming_soon" class="bg-white/10 p-3 rounded-full hover:bg-sky-500 transition"><i data-feather="twitter"></i></a>
+        <a href="/coming_soon" class="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition"><i data-feather="instagram"></i></a>
+        <a href="/coming_soon" class="bg-white/10 p-3 rounded-full hover:bg-blue-500 transition"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Menu Section -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform duration-500 ease-in-out shadow-lg md:hidden">
+  <div class="flex justify-between items-center p-4 border-b border-gray-200">
+    <img src="img/logo-removebg.png" alt="Logo" class="w-24 h-auto">
+    <button id="mobile-menu-close" class="rounded-full p-2 hover:bg-gray-100">
+      <i data-feather="x" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <nav class="flex flex-col mt-10 space-y-6 px-6">
+    <a href="/" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Home</a>
+    <a href="/about" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">About</a>
+    <a href="/coming_soon" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Features</a>
+    <a href="/coming_soon" class="text-gray-800 text-xl font-semibold hover:text-purple-600 transition">Pricing</a>
+    <a href="/coming_soon" class="mt-6 inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white text-center rounded-full px-8 py-3 hover:from-purple-700 hover:to-blue-600 shadow-lg transition">Book a Demo</a>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+
+    const menuButton = document.getElementById('m-menu-button');
+    const closeButton = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && closeButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        console.log("gjhjhjhbj");
+        mobileMenu.classList.remove('-translate-x-full');
+      });
+
+      closeButton.addEventListener('click', () => {
+        console.log("gjhjhjhbj");
+        mobileMenu.classList.add('-translate-x-full');
+      });
+    }
+
+    feather.replace();
+  });
+</script>
+
+
+
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-out-quart",
+        once: true,
+      });
+      feather.replace();
+    </script>
+  </body>
+</html>
