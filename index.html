@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     
     <style>
       @keyframes float {
@@ -177,14 +179,16 @@
             <div
               class="bg-white/70 rounded-[50px] p-8 shadow-2xl backdrop-blur-lg"
             >
-              <form class="space-y-4">
+              <form class="space-y-4" id="submit-to-google-sheet">
                 <input
                   type="text"
+                  name="Name"
                   placeholder="Your Name"
                   class="w-full rounded-[25px] px-6 py-4 bg-white/60 border-2 border-white/40 focus:border-purple-300 focus:bg-white/80 transition-all duration-300 outline-none"
                 />
                 <input
                   type="email"
+                  name="Email"
                   placeholder="Email Address"
                   class="w-full rounded-[25px] px-6 py-4 bg-white/60 border-2 border-white/40 focus:border-purple-300 focus:bg-white/80 transition-all duration-300 outline-none"
                 />
@@ -695,6 +699,24 @@
     feather.replace();
   });
 </script>
+
+ <script>
+      const scriptURL =                       
+      "https://script.google.com/macros/s/AKfycbzXdj8rXdkp_9u8BUD60iIPNW5RkxuPOFbA8Kij51nKKTJZsUcNG7TimHCv7x5YzmmJ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Submitted Successfully.", "success");
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. please try again!", "error");
+          });
+      });
+    </script>
 
 
 
