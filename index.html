@@ -703,29 +703,38 @@
 </script>
 
  <script>
-           // ...existing code...
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzXdj8rXdkp_9u8BUD60iIPNW5RkxuPOFbA8Kij51nKKTJZsUcNG7TimHCv7x5YzmmJ/exec";
-      const form = document.getElementById("submit-to-google-sheet");
-      const submitBtn = form.querySelector('button[type="submit"]');
-      
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        submitBtn.disabled = true; // Disable button
-        var formData = new FormData(form);
-      
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            swal("Done", "Submitted Successfully.", "success");
-            form.reset();
-            submitBtn.disabled = false; // Re-enable button
-          })
-          .catch((error) => {
-            swal("Error", "Something went wrong. please try again!", "error");
-            form.reset();
-            submitBtn.disabled = false; // Re-enable button
+                // ...existing code...
+          const scriptURL = "https://script.google.com/macros/s/AKfycbzXdj8rXdkp_9u8BUD60iIPNW5RkxuPOFbA8Kij51nKKTJZsUcNG7TimHCv7x5YzmmJ/exec";
+          const form = document.getElementById("submit-to-google-sheet");
+          const submitBtn = form.querySelector('button[type="submit"]');
+          
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true; // Disable button
+            // Change to light theme
+            submitBtn.classList.remove("from-purple-600", "to-blue-500", "hover:from-purple-700", "hover:to-blue-600");
+            submitBtn.classList.add("from-purple-100", "to-blue-100", "text-purple-700");
+            var formData = new FormData(form);
+          
+            fetch(scriptURL, { method: "POST", body: formData })
+              .then((response) => {
+                swal("Done", "Submitted Successfully.", "success");
+                form.reset();
+                submitBtn.disabled = false; // Re-enable button
+                // Restore normal color
+                submitBtn.classList.remove("from-purple-100", "to-blue-100", "text-purple-700");
+                submitBtn.classList.add("from-purple-600", "to-blue-500", "hover:from-purple-700", "hover:to-blue-600", "text-white");
+              })
+              .catch((error) => {
+                swal("Error", "Something went wrong. please try again!", "error");
+                form.reset();
+                submitBtn.disabled = false; // Re-enable button
+                // Restore normal color
+                submitBtn.classList.remove("from-purple-100", "to-blue-100", "text-purple-700");
+                submitBtn.classList.add("from-purple-600", "to-blue-500", "hover:from-purple-700", "hover:to-blue-600", "text-white");
+              });
           });
-      });
-      // ...existing code...
+          // ...existing code...
     </script>
 
 
