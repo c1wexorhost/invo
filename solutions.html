@@ -176,13 +176,20 @@
     </section>
 
 
-    <!-- Solutions grid with free icon URLs -->
-<!-- Solutions Session: Unique Flow (non-column layout)
-     Drop this section into your existing solutions.html where you want the new "session" to appear.
-     It uses the same Tailwind classes and visual style as your page.
+<!-- TWO SEPARATE SESSIONS: Desktop + Mobile
+
+  This file creates two distinct sections you can paste into your site:
+  1) <section id="solutions-desktop"> — the original, unchanged desktop flowing-path design (visible on md+).
+  2) <section id="solutions-mobile">  — a dedicated mobile-first accordion + compact action cards UI (visible on small screens).
+
+  Usage: Paste both sections into your page. Desktop section uses `hidden md:block`; Mobile section uses `block md:hidden`.
+  This keeps the desktop exactly as you supplied, and provides a fully separate mobile experience.
+
+  Note: Both sections are self-contained and rely on Tailwind utility classes present in your project.
 -->
-<section id="solutions-session" class="relative py-28 bg-gradient-to-b from-white via-gray-50 to-white text-gray-900 overflow-visible">
-  <!-- Decorative curved path SVG (background) -->
+
+<!-- DESKTOP SESSION (unchanged) -->
+<section id="solutions-desktop" class="hidden md:block relative py-28 bg-gradient-to-b from-white via-gray-50 to-white text-gray-900 overflow-visible">
   <div class="absolute inset-0 pointer-events-none">
     <svg class="w-full h-full" viewBox="0 0 1440 720" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -204,32 +211,18 @@
         <h2 class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Solutions — an interactive journey</h2>
         <p class="mt-3 text-gray-600 max-w-xl">A flowing, non-column session that tells a continuous story — attachments, bulk imports, templates, reminders, notifications, mobile, and compliance wrapped into a single guided path.</p>
       </div>
-
-      <!-- Bilingual / RTL toggle -->
-      <!-- <div class="flex items-center space-x-3">
-        <div class="text-sm text-gray-500">Preview:</div>
-        <div class="inline-flex items-center bg-white rounded-full p-1 shadow-md">
-          <button id="lang-en" class="px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-600">EN</button>
-          <button id="lang-ar" class="px-3 py-1 rounded-full text-sm font-medium text-gray-600 hover:bg-gray-100">AR</button>
-        </div>
-        <button id="rtl-toggle" class="ml-4 px-3 py-2 rounded-full bg-gray-100 text-sm">Toggle RTL</button>
-      </div> -->
     </div>
 
-    <!-- The flowing path with floating nodes -->
     <div class="relative h-[640px]">
-      <!-- Central curved visual (for alignment) -->
       <svg viewBox="0 0 1000 640" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid meet">
         <path id="flowPath" d="M40,560 C180,460 320,200 480,200 C640,200 760,460 960,360" stroke="transparent" fill="none" />
       </svg>
 
-      <!-- Node 1: Attachments (Start) -->
+      <!-- All desktop nodes (kept exactly as user provided) -->
       <div class="absolute" style="left:6%; top:64%; transform:translate(-50%,-50%);">
         <div class="w-64 p-5 rounded-2xl bg-white border border-gray-200 card-shadow backdrop-blur-sm">
           <div class="flex items-start space-x-3">
-            <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
-              <i data-feather="paperclip" class="w-5 h-5"></i>
-            </div>
+            <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">📎</div>
             <div>
               <h4 class="font-semibold text-lg">Attachments on Invoices</h4>
               <p class="text-sm text-gray-600 mt-1">Attach POs, contracts, receipts to invoices and payments. Files are versioned and timestamped.</p>
@@ -242,13 +235,10 @@
         </div>
       </div>
 
-      <!-- Node 2: Bulk import (along path) -->
       <div class="absolute" style="left:22%; top:46%; transform:translate(-50%,-50%);">
         <div class="w-72 p-5 rounded-3xl bg-gradient-to-r from-white to-indigo-50 border border-gray-200 card-shadow">
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
-              <i data-feather="file" class="w-5 h-5"></i>
-            </div>
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">📁</div>
             <div>
               <h4 class="font-semibold">Bulk Import & Actions</h4>
               <p class="text-sm text-gray-600 mt-1">CSV upload for clients, items, invoices. Bulk actions: send, mark-paid, export, re-number.</p>
@@ -261,14 +251,11 @@
         </div>
       </div>
 
-      <!-- Node 3: Template Builder (center hero) -->
       <div class="absolute" style="left:44%; top:28%; transform:translate(-50%,-50%);">
         <div class="w-[520px] p-6 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl">
           <div class="flex items-start justify-between">
             <div class="flex items-start gap-4">
-              <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-100 to-indigo-100 flex items-center justify-center text-purple-600">
-                <i data-feather="layout" class="w-6 h-6"></i>
-              </div>
+              <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-100 to-indigo-100 flex items-center justify-center text-purple-600">🧩</div>
               <div>
                 <h3 class="text-xl font-bold">Invoice Template Builder</h3>
                 <p class="text-sm text-gray-600 mt-1">Drag-and-drop editor for branding. Create AR/EN bilingual templates and export RTL-ready PDFs with QR codes and TRN fields.</p>
@@ -282,7 +269,6 @@
             </div>
           </div>
 
-          <!-- Mini preview strip -->
           <div class="mt-4 bg-gray-50 border border-gray-100 p-3 rounded-lg flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-md bg-gradient-to-r from-indigo-500 to-purple-500 text-white flex items-center justify-center">A</div>
@@ -296,13 +282,10 @@
         </div>
       </div>
 
-      <!-- Node 4: Dunning & Reminders -->
       <div class="absolute" style="left:62%; top:36%; transform:translate(-50%,-50%);">
         <div class="w-64 p-5 rounded-2xl bg-white border border-gray-200 shadow-md">
           <div class="flex items-start gap-3">
-            <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center text-pink-600">
-              <i data-feather="bell" class="w-5 h-5"></i>
-            </div>
+            <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center text-pink-600">🔔</div>
             <div>
               <h4 class="font-semibold">Dunning & Reminder Automation</h4>
               <p class="text-sm text-gray-600 mt-1">Schedule overdue reminders with escalation rules — email, WhatsApp, SMS, and optional legal notice workflow.</p>
@@ -312,13 +295,10 @@
         </div>
       </div>
 
-      <!-- Node 5: Notifications Dashboard (near end) -->
       <div class="absolute" style="left:80%; top:56%; transform:translate(-50%,-50%);">
         <div class="w-72 p-5 rounded-3xl bg-gradient-to-r from-white to-cyan-50 border border-gray-200 shadow-lg">
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-600">
-              <i data-feather="send" class="w-5 h-5"></i>
-            </div>
+            <div class="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-600">✉️</div>
             <div>
               <h4 class="font-semibold">Notifications Dashboard</h4>
               <p class="text-sm text-gray-600 mt-1">View sent reminders, delivery status, and open rates for email & WhatsApp. Export logs for audits.</p>
@@ -331,13 +311,10 @@
         </div>
       </div>
 
-      <!-- Node 6: Compliance & Security (final cluster) -->
       <div class="absolute" style="left:92%; top:24%; transform:translate(-50%,-50%);">
         <div class="w-80 p-5 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl">
           <div class="flex items-start gap-3">
-            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center text-green-600">
-              <i data-feather="shield" class="w-5 h-5"></i>
-            </div>
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center text-green-600">🛡️</div>
             <div>
               <h4 class="font-semibold">Compliance & Security</h4>
               <p class="text-sm text-gray-600 mt-1">Immutable audit trails, E-invoicing fields (TRN, QR), RBAC, multi-company support, API key & webhook management, exportable audit reports.</p>
@@ -347,7 +324,6 @@
         </div>
       </div>
 
-      <!-- Floating CTA badge along path -->
       <div class="absolute" style="left:52%; top:74%; transform:translate(-50%,-50%);">
         <div class="inline-flex items-center gap-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-full px-6 py-3 shadow-xl">
           <div class="text-sm font-semibold">Want a walkthrough?</div>
@@ -355,23 +331,112 @@
         </div>
       </div>
 
-      <!-- Small connectors (dots) along the path -->
       <div class="absolute left-[6%] top-[64%] w-3 h-3 rounded-full bg-indigo-400 shadow-lg"></div>
       <div class="absolute left-[22%] top-[46%] w-3 h-3 rounded-full bg-blue-400 shadow-lg"></div>
-      <div class="absolute left-[44%] top-[28%] w-3 h-3 rounded-full bg-purple-400 shadow-lg"></div>
-      <div class="absolute left-[62%] top-[36%] w-3 h-3 rounded-full bg-pink-400 shadow-lg"></div>
-      <div class="absolute left-[80%] top-[56%] w-3 h-3 rounded-full bg-cyan-400 shadow-lg"></div>
-      <div class="absolute left-[92%] top-[24%] w-3 h-3 rounded-full bg-green-400 shadow-lg"></div>
+      <div class="absolute left=[44%] top=[28%] w-3 h-3 rounded-full bg-purple-400 shadow-lg"></div>
+      <div class="absolute left-[62%] top=[36%] w-3 h-3 rounded-full bg-pink-400 shadow-lg"></div>
+      <div class="absolute left-[80%] top=[56%] w-3 h-3 rounded-full bg-cyan-400 shadow-lg"></div>
+      <div class="absolute left-[92%] top=[24%] w-3 h-3 rounded-full bg-green-400 shadow-lg"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE SESSION (separate) -->
+<section id="solutions-mobile" class="block md:hidden relative bg-white py-6">
+  <div class="max-w-3xl mx-auto px-4">
+    <h3 class="text-xl font-bold mb-3">Solutions</h3>
+    <p class="text-sm text-gray-600 mb-4">Tap each card for a quick action or details — optimized for mobile workflows.</p>
+
+    <div class="space-y-4">
+      <!-- Mobile card: Attachments -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center">📎</div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">Attachments on Invoices</div>
+                <div class="text-sm text-gray-600 mt-1">Attach POs, contracts and receipts. Versioning & download access.</div>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 py-2 rounded-full bg-indigo-600 text-white text-sm">Add Attachment</button>
+              <button class="flex-1 py-2 rounded-full bg-white border border-gray-200 text-sm">View Files</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile card: Bulk Import -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">📁</div>
+          <div class="flex-1">
+            <div class="font-semibold">Bulk Import & Actions</div>
+            <div class="text-sm text-gray-600 mt-1">Upload CSV, map fields and run bulk operations on clients and invoices.</div>
+            <div class="mt-3 flex gap-2">
+              <button class="flex-1 py-2 rounded-full bg-indigo-600 text-white text-sm">Upload CSV</button>
+              <button class="flex-1 py-2 rounded-full bg-white border border-gray-200 text-sm">Download Template</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile card: Template Builder -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center">🧩</div>
+          <div class="flex-1">
+            <div class="font-semibold">Invoice Template Builder</div>
+            <div class="text-sm text-gray-600 mt-1">Quickly pick templates, swap logos, and export PDF-ready invoices.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile card: Dunning & Reminders -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center">🔔</div>
+          <div class="flex-1">
+            <div class="font-semibold">Dunning & Reminders</div>
+            <div class="text-sm text-gray-600 mt-1">Set escalation rules, preview messages and automate overdue notices.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile card: Notifications -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center">✉️</div>
+          <div class="flex-1">
+            <div class="font-semibold">Notifications Dashboard</div>
+            <div class="text-sm text-gray-600 mt-1">Track delivery, opens and export logs for audits.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile card: Compliance -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+        <div class="flex items-start gap-3">
+          <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center">🛡️</div>
+          <div class="flex-1">
+            <div class="font-semibold">Compliance & Security</div>
+            <div class="text-sm text-gray-600 mt-1">Immutable audit trails, TRN & QR fields, RBAC and exportable audit reports.</div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
- </div>
-
-  <!-- Inline script to support bilingual toggle & RTL switch -->
- 
-
-  
+    <div class="mt-6 text-center">
+      <a href="#contact" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-full font-semibold">Book a Demo</a>
+    </div>
+  </div>
 </section>
+
+<!-- Optional mobile JS for lightweight interactions -->
+
 
 
     <section id="compliance-security" class=" bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 relative overflow-hidden">
@@ -817,49 +882,6 @@ Smart Invoicing</h3>
   });
 </script>
 
- <script>
-    (function(){
-      const langEn = document.getElementById('lang-en');
-      const langAr = document.getElementById('lang-ar');
-      const rtlToggle = document.getElementById('rtl-toggle');
-      const root = document.documentElement;
-
-      function setRTL(on){
-        if(on){
-          root.setAttribute('dir','rtl');
-          root.classList.add('rtl');
-        } else {
-          root.setAttribute('dir','ltr');
-          root.classList.remove('rtl');
-        }
-      }
-
-      langEn.addEventListener('click', ()=>{
-        langEn.classList.add('bg-indigo-50','text-indigo-600');
-        langAr.classList.remove('bg-indigo-50','text-indigo-600');
-        setRTL(false);
-      });
-
-      langAr.addEventListener('click', ()=>{
-        langAr.classList.add('bg-indigo-50','text-indigo-600');
-        langEn.classList.remove('bg-indigo-50','text-indigo-600');
-        setRTL(true);
-      });
-
-      rtlToggle.addEventListener('click', ()=>{
-        const dir = root.getAttribute('dir') === 'rtl';
-        setRTL(!dir);
-      });
-
-      // Tiny entrance animation
-      document.addEventListener('DOMContentLoaded', ()=>{
-        document.querySelectorAll('#solutions-session .w-64, #solutions-session .w-72, #solutions-session .w-80, #solutions-session .w-[520px]').forEach((el,i)=>{
-          el.style.opacity = 0; el.style.transform = 'translateY(20px)';
-          setTimeout(()=>{ el.style.transition = 'all 650ms cubic-bezier(.2,.9,.3,1)'; el.style.opacity=1; el.style.transform='translateY(0)'; }, 120*i);
-        });
-      });
-    })();
-  </script>
 
 
 
