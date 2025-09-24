@@ -177,6 +177,228 @@
 
 
     <!-- Solutions grid with free icon URLs -->
+<!-- Solutions Session: Unique Flow (non-column layout)
+     Drop this section into your existing solutions.html where you want the new "session" to appear.
+     It uses the same Tailwind classes and visual style as your page.
+-->
+<section id="solutions-session" class="relative py-28 bg-gradient-to-b from-white via-gray-50 to-white text-gray-900 overflow-visible">
+  <!-- Decorative curved path SVG (background) -->
+  <div class="absolute inset-0 pointer-events-none">
+    <svg class="w-full h-full" viewBox="0 0 1440 720" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.08" />
+          <stop offset="100%" stop-color="#0ea5b7" stop-opacity="0.06" />
+        </linearGradient>
+        <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="40" />
+        </filter>
+      </defs>
+      <path d="M0,200 C240,120 420,320 720,320 C1020,320 1200,120 1440,200 L1440,720 L0,720 Z" fill="url(#g1)" filter="url(#f1)" />
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div class="flex items-center justify-between mb-10">
+      <div>
+        <h2 class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Solutions — an interactive journey</h2>
+        <p class="mt-3 text-gray-600 max-w-xl">A flowing, non-column session that tells a continuous story — attachments, bulk imports, templates, reminders, notifications, mobile, and compliance wrapped into a single guided path.</p>
+      </div>
+
+      <!-- Bilingual / RTL toggle -->
+      <!-- <div class="flex items-center space-x-3">
+        <div class="text-sm text-gray-500">Preview:</div>
+        <div class="inline-flex items-center bg-white rounded-full p-1 shadow-md">
+          <button id="lang-en" class="px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-600">EN</button>
+          <button id="lang-ar" class="px-3 py-1 rounded-full text-sm font-medium text-gray-600 hover:bg-gray-100">AR</button>
+        </div>
+        <button id="rtl-toggle" class="ml-4 px-3 py-2 rounded-full bg-gray-100 text-sm">Toggle RTL</button>
+      </div> -->
+    </div>
+
+    <!-- The flowing path with floating nodes -->
+    <div class="relative h-[640px]">
+      <!-- Central curved visual (for alignment) -->
+      <svg viewBox="0 0 1000 640" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid meet">
+        <path id="flowPath" d="M40,560 C180,460 320,200 480,200 C640,200 760,460 960,360" stroke="transparent" fill="none" />
+      </svg>
+
+      <!-- Node 1: Attachments (Start) -->
+      <div class="absolute" style="left:6%; top:64%; transform:translate(-50%,-50%);">
+        <div class="w-64 p-5 rounded-2xl bg-white border border-gray-200 card-shadow backdrop-blur-sm">
+          <div class="flex items-start space-x-3">
+            <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+              <i data-feather="paperclip" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg">Attachments on Invoices</h4>
+              <p class="text-sm text-gray-600 mt-1">Attach POs, contracts, receipts to invoices and payments. Files are versioned and timestamped.</p>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="text-xs text-gray-500">Supported: PDF, JPG, PNG, DOCX</div>
+            <a href="#" class="text-indigo-600 text-sm font-medium">See sample →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node 2: Bulk import (along path) -->
+      <div class="absolute" style="left:22%; top:46%; transform:translate(-50%,-50%);">
+        <div class="w-72 p-5 rounded-3xl bg-gradient-to-r from-white to-indigo-50 border border-gray-200 card-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+              <i data-feather="file" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold">Bulk Import & Actions</h4>
+              <p class="text-sm text-gray-600 mt-1">CSV upload for clients, items, invoices. Bulk actions: send, mark-paid, export, re-number.</p>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center gap-3">
+            <button class="px-3 py-2 rounded-full bg-indigo-600 text-white text-sm">Upload CSV</button>
+            <button class="px-3 py-2 rounded-full bg-white border border-gray-200 text-sm">Download Template</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node 3: Template Builder (center hero) -->
+      <div class="absolute" style="left:44%; top:28%; transform:translate(-50%,-50%);">
+        <div class="w-[520px] p-6 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl">
+          <div class="flex items-start justify-between">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-100 to-indigo-100 flex items-center justify-center text-purple-600">
+                <i data-feather="layout" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Invoice Template Builder</h3>
+                <p class="text-sm text-gray-600 mt-1">Drag-and-drop editor for branding. Create AR/EN bilingual templates and export RTL-ready PDFs with QR codes and TRN fields.</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="inline-flex items-center bg-white border border-gray-200 rounded-full px-3 py-1">
+                <span class="text-xs text-gray-600 mr-2">Preview</span>
+                <button class="px-2 py-1 rounded-full text-sm bg-indigo-50 text-indigo-600">Desktop</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini preview strip -->
+          <div class="mt-4 bg-gray-50 border border-gray-100 p-3 rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-md bg-gradient-to-r from-indigo-500 to-purple-500 text-white flex items-center justify-center">A</div>
+              <div>
+                <div class="text-sm font-semibold">Bilingual Invoice</div>
+                <div class="text-xs text-gray-500">AR + EN • RTL Ready • QR + TRN</div>
+              </div>
+            </div>
+            <div class="text-sm text-gray-500">Drag fields to customize →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node 4: Dunning & Reminders -->
+      <div class="absolute" style="left:62%; top:36%; transform:translate(-50%,-50%);">
+        <div class="w-64 p-5 rounded-2xl bg-white border border-gray-200 shadow-md">
+          <div class="flex items-start gap-3">
+            <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center text-pink-600">
+              <i data-feather="bell" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold">Dunning & Reminder Automation</h4>
+              <p class="text-sm text-gray-600 mt-1">Schedule overdue reminders with escalation rules — email, WhatsApp, SMS, and optional legal notice workflow.</p>
+            </div>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">Templates • Escalation • Pause & Retry</div>
+        </div>
+      </div>
+
+      <!-- Node 5: Notifications Dashboard (near end) -->
+      <div class="absolute" style="left:80%; top:56%; transform:translate(-50%,-50%);">
+        <div class="w-72 p-5 rounded-3xl bg-gradient-to-r from-white to-cyan-50 border border-gray-200 shadow-lg">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-600">
+              <i data-feather="send" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold">Notifications Dashboard</h4>
+              <p class="text-sm text-gray-600 mt-1">View sent reminders, delivery status, and open rates for email & WhatsApp. Export logs for audits.</p>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="text-xs text-gray-500">Filters: date, channel, status</div>
+            <a href="#" class="text-cyan-600 text-sm font-medium">Open Dashboard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node 6: Compliance & Security (final cluster) -->
+      <div class="absolute" style="left:92%; top:24%; transform:translate(-50%,-50%);">
+        <div class="w-80 p-5 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl">
+          <div class="flex items-start gap-3">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center text-green-600">
+              <i data-feather="shield" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold">Compliance & Security</h4>
+              <p class="text-sm text-gray-600 mt-1">Immutable audit trails, E-invoicing fields (TRN, QR), RBAC, multi-company support, API key & webhook management, exportable audit reports.</p>
+            </div>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">ISO-grade encryption • Tamper-evident logs</div>
+        </div>
+      </div>
+
+      <!-- Floating CTA badge along path -->
+      <div class="absolute" style="left:52%; top:74%; transform:translate(-50%,-50%);">
+        <div class="inline-flex items-center gap-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-full px-6 py-3 shadow-xl">
+          <div class="text-sm font-semibold">Want a walkthrough?</div>
+          <a href="#contact" class="bg-white/10 px-4 py-2 rounded-full text-sm">Book a Demo</a>
+        </div>
+      </div>
+
+      <!-- Small connectors (dots) along the path -->
+      <div class="absolute left-[6%] top-[64%] w-3 h-3 rounded-full bg-indigo-400 shadow-lg"></div>
+      <div class="absolute left-[22%] top-[46%] w-3 h-3 rounded-full bg-blue-400 shadow-lg"></div>
+      <div class="absolute left-[44%] top-[28%] w-3 h-3 rounded-full bg-purple-400 shadow-lg"></div>
+      <div class="absolute left-[62%] top-[36%] w-3 h-3 rounded-full bg-pink-400 shadow-lg"></div>
+      <div class="absolute left-[80%] top-[56%] w-3 h-3 rounded-full bg-cyan-400 shadow-lg"></div>
+      <div class="absolute left-[92%] top-[24%] w-3 h-3 rounded-full bg-green-400 shadow-lg"></div>
+
+    </div>
+
+ </div>
+
+  <!-- Inline script to support bilingual toggle & RTL switch -->
+ 
+
+  
+</section>
+
+
+    <section id="compliance-security" class=" bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+     <!-- Bottom CTA Section -->
+            <div class="text-center mt-16" data-aos="fade-up">
+                <div class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                        Enterprise Security & Compliance
+                    </h3>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Built for businesses that require the highest levels of security, compliance, and audit readiness. 
+                        Our platform meets international standards while adapting to local GCC regulations.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#contact" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full px-8 py-3 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                            Schedule Security Demo
+                        </a>
+                        <a href="mailto:security@sumu.com" class="bg-white/10 border border-white/20 text-white font-semibold rounded-full px-8 py-3 hover:bg-white/20 transition-all duration-300">
+                            Contact Security Team
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 <section id="catalog" class="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 relative overflow-hidden">
@@ -594,6 +816,50 @@ Smart Invoicing</h3>
     feather.replace();
   });
 </script>
+
+ <script>
+    (function(){
+      const langEn = document.getElementById('lang-en');
+      const langAr = document.getElementById('lang-ar');
+      const rtlToggle = document.getElementById('rtl-toggle');
+      const root = document.documentElement;
+
+      function setRTL(on){
+        if(on){
+          root.setAttribute('dir','rtl');
+          root.classList.add('rtl');
+        } else {
+          root.setAttribute('dir','ltr');
+          root.classList.remove('rtl');
+        }
+      }
+
+      langEn.addEventListener('click', ()=>{
+        langEn.classList.add('bg-indigo-50','text-indigo-600');
+        langAr.classList.remove('bg-indigo-50','text-indigo-600');
+        setRTL(false);
+      });
+
+      langAr.addEventListener('click', ()=>{
+        langAr.classList.add('bg-indigo-50','text-indigo-600');
+        langEn.classList.remove('bg-indigo-50','text-indigo-600');
+        setRTL(true);
+      });
+
+      rtlToggle.addEventListener('click', ()=>{
+        const dir = root.getAttribute('dir') === 'rtl';
+        setRTL(!dir);
+      });
+
+      // Tiny entrance animation
+      document.addEventListener('DOMContentLoaded', ()=>{
+        document.querySelectorAll('#solutions-session .w-64, #solutions-session .w-72, #solutions-session .w-80, #solutions-session .w-[520px]').forEach((el,i)=>{
+          el.style.opacity = 0; el.style.transform = 'translateY(20px)';
+          setTimeout(()=>{ el.style.transition = 'all 650ms cubic-bezier(.2,.9,.3,1)'; el.style.opacity=1; el.style.transform='translateY(0)'; }, 120*i);
+        });
+      });
+    })();
+  </script>
 
 
 
