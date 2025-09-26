@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /coming_soon
+Allow: /
+
+Sitemap: https://joinsumu.com/sitemap.xml
